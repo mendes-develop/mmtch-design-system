@@ -9,13 +9,6 @@ const meta = {
   args: {
     children: "Hello world",
   },
-  decorators: [
-    (Story) => (
-      <View style={{ padding: 16 }} className="border border-gray-200 rounded-md">
-        <Story />
-      </View>
-    ),
-  ],
 } satisfies Meta<typeof Button>;
 
 export default meta;
