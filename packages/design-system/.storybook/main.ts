@@ -1,4 +1,4 @@
-import path from 'path';
+import path from "path";
 
 /** @type{import("@storybook/react-webpack5").StorybookConfig} */
 module.exports = {
@@ -10,23 +10,23 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     {
-      name: '@storybook/addon-react-native-web',
+      name: "@storybook/addon-react-native-web",
       options: {
         modulesToTranspile: [
-          'react-native-reanimated',
-          'nativewind',
-          'react-native-css-interop',
-          '@rn-primitives/slot',
+          "react-native-reanimated",
+          "nativewind",
+          "react-native-css-interop",
+          "@rn-primitives/slot",
         ],
-        babelPresets: ['nativewind/babel'],
-        babelPresetReactOptions: { jsxImportSource: 'nativewind' },
+        babelPresets: ["nativewind/babel"],
+        babelPresetReactOptions: { jsxImportSource: "nativewind" },
         babelPlugins: [
-          'react-native-reanimated/plugin',
+          "react-native-reanimated/plugin",
           [
-            '@babel/plugin-transform-react-jsx',
+            "@babel/plugin-transform-react-jsx",
             {
-              runtime: 'automatic',
-              importSource: 'nativewind',
+              runtime: "automatic",
+              importSource: "nativewind",
             },
           ],
         ],
@@ -45,19 +45,19 @@ module.exports = {
       test: /\.css$/,
       use: [
         {
-          loader: 'postcss-loader',
+          loader: "postcss-loader",
           options: {
             postcssOptions: {
-              plugins: [require('tailwindcss'), require('autoprefixer')]
-            }
-          }
-        }
+              plugins: [require("tailwindcss"), require("autoprefixer")],
+            },
+          },
+        },
       ],
-      include: path.resolve(__dirname, '../') // path to project root
-    })
+      include: path.resolve(__dirname, "../"), // path to project root
+    });
 
     return {
-      ...config
-    }
-  }
+      ...config,
+    };
+  },
 };
