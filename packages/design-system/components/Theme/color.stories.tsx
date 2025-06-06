@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-// import {ComponentName} from './ComponentName';
+import { View, Text } from "react-native";
 
 const meta = {
   title: "ColorPreviewItem",
@@ -18,19 +18,15 @@ export const BaseComponentName: Story = {
 
 function ColorPreviewItem({ label, color }: { label: string; color: string }) {
   return (
-    <div className="group/color-preview hover:bg-muted relative flex items-center gap-4 rounded-md transition-colors">
-      <div
+    <View className="relative flex flex-row items-center gap-4 rounded-md p-2">
+      <View
         className="h-12 w-12 rounded-md border"
         style={{ backgroundColor: color }}
       />
-      <div className="flex-1">
-        <p className="text-sm font-medium @max-3xl:text-xs">{label}</p>
-        <p className="text-muted-foreground text-xs">{color}</p>
-      </div>
-
-      {/* <div className="absolute right-1 rounded-md opacity-0 transition-opacity group-hover/color-preview:opacity-100">
-        <CopyButton textToCopy={color} />
-      </div> */}
-    </div>
+      <View className="flex-1">
+        <Text className="text-sm font-medium">{label}</Text>
+        <Text className="text-xs text-gray-500">{color}</Text>
+      </View>
+    </View>
   );
 }
