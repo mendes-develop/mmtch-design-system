@@ -12,7 +12,7 @@ export const MyButton = ({ onPress, text }: MyButtonProps) => {
       className="self-center px-8 py-2 bg-primary rounded-lg web:hover:bg-sky-600 native:active:bg-sky-600"
       onPress={onPress}
     >
-      <Text className="text-white text-lg font-bold">{text}</Text>
+      <Text className="text-primary-foreground text-lg font-bold">{text}</Text>
     </Pressable>
   );
 };
