@@ -23,6 +23,7 @@ yarn start
 # Storybook
 
 To start the Storybook instance, you have 2 options:
+
 - ondevice: run the React Native version of your components. Best for: native, but works for web as well (no hot-reloading on the web)
 - web: run a full Storybook version with more advanced features, including hot-reloading for Web. Doesn't run on native devices.
 
