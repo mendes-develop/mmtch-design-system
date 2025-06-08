@@ -1,5 +1,5 @@
 {
-	"name": "design-system",
+	"name": "storybook",
 	"description": "An Expo template with NativeWind styling & Storybook (incl. React Native & Web)",
 	"version": "1.0.3",
 	"author": "Kim Chouard",
@@ -32,6 +32,7 @@
 		"expo-constants": "~15.4.5",
 		"expo-dev-client": "~3.3.12",
 		"expo-status-bar": "~1.11.1",
+		"expo-updates": "~0.24.13",
 		"lucide-react": "^0.513.0",
 		"nativewind": "^4.0.1",
 		"postcss-loader": "^8.1.0",
@@ -78,6 +79,5 @@
 		"overrides": {
 			"react-docgen-typescript": "2.2.2"
 		}
-	},
-	"packageManager": "pnpm@8.14.1"
+	}
 }
